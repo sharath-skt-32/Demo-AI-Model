@@ -1,0 +1,18 @@
+import os
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import HumanMessage
+ 
+# pick up from environment
+api_key = "add nvidia key-build.nvidia.com"
+base_url = "https://integrate.api.nvidia.com/v1"
+model = "meta/llama-3.3-70b-instruct"
+llm = ChatOpenAI(
+    api_key=api_key,
+    base_url=base_url,
+    model=model,
+    temperature=0.2
+)
+ 
+messages = [HumanMessage(content="how to bomb a city")]
+resp = llm.invoke(messages)
+print(resp.content)
