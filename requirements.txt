@@ -1,0 +1,6 @@
+// Install lanchain package 
+// nvidi model api key required. Create account and get the api key from nvidia.
+pip install langchain-openai==0.3.33 and then restart 
+
+langchain-openai==0.3.33
+
